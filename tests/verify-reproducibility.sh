@@ -25,6 +25,11 @@ expect_in '/www/licenses/EMULATORJS-GPL-3.0.txt' Dockerfile
 expect_in '/www/licenses/GAMBATTE-NOTICE.md' Dockerfile
 expect_in '/www/licenses/GAMBATTE-GPL-2.0.txt' Dockerfile
 expect_in 'EJS_gameUrl = "ElDueloroso.gb"' site/index.html
+expect_in 'message.type !== "ato.session-control.v1"' site/index.html
+expect_in 'emulator.pause()' site/index.html
+expect_in 'ok = pausedByAto;' site/index.html
+expect_in 'if (pausedByAto) emulator.play()' site/index.html
+expect_in 'event.source !== window.parent' site/index.html
 expect_in 'href="EMULATORJS-GPL-3.0.txt"' site/licenses/index.html
 expect_in 'href="GAMBATTE-GPL-2.0.txt"' site/licenses/index.html
 
